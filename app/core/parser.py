@@ -2,9 +2,6 @@ from app.core.command import Command
 
 
 class Parser:
-    """
-    Converts raw user input into a Command object.
-    """
 
     def parse(self, text: str) -> Command:
 
@@ -15,6 +12,10 @@ class Parser:
         intent = parts[0].lower()
 
         arguments = parts[1:]
+
+        print("DEBUG")
+        print("Intent:", intent)
+        print("Arguments:", arguments)
 
         return Command(
             raw=text,
