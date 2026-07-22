@@ -4,9 +4,13 @@ from dataclasses import dataclass
 @dataclass
 class Command:
     """
-    Represents a command issued by the user.
+    Represents a parsed user command.
     """
 
     raw: str
-    intent: str = ""
-    arguments: list[str] | None = None
+
+    intent: str
+
+    target: str | None
+
+    arguments: list[str]

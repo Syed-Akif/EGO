@@ -9,12 +9,32 @@ class Parser:
 
         parts = text.split()
 
+        if not parts:
+
+            return Command(
+                raw="",
+                intent="",
+                target=None,
+                arguments=[]
+            )
+
         intent = parts[0].lower()
 
-        arguments = parts[1:]
+        target = None
+
+        arguments = []
+
+        if len(parts) >= 2:
+
+            target = parts[1].lower()
+
+        if len(parts) >= 3:
+            
+            arguments = parts[2:]
 
         return Command(
             raw=text,
             intent=intent,
+            target=target,
             arguments=arguments
         )
