@@ -13,10 +13,6 @@ class Parser:
 
         arguments = parts[1:]
 
-        print("DEBUG")
-        print("Intent:", intent)
-        print("Arguments:", arguments)
-
         return Command(
             raw=text,
             intent=intent,
