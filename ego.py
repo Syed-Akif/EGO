@@ -9,7 +9,7 @@ Version: 0.2.0-alpha
 
 from app.core.parser import Parser
 from app.core.router import Router
-
+from app.core.brain import Brain
 
 def main():
 
@@ -20,6 +20,7 @@ def main():
 
     parser = Parser()
     router = Router()
+    brain = Brain()
 
     while True:
 
@@ -30,6 +31,8 @@ def main():
             break
 
         command = parser.parse(user_input)
+
+        command = brain.think(command)
 
         response = router.route(command)
 

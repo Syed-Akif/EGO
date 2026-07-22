@@ -1,5 +1,6 @@
 from app.core.registry import PLUGINS
 from app.core.response import Response
+from app.core.context import context
 
 
 class Router:
@@ -9,9 +10,16 @@ class Router:
         plugin = PLUGINS.get(command.intent)
 
         if plugin:
-            return plugin.execute(command)
 
-        return Response(
-            success=False,
-            message="Sorry, I don't understand that command yet."
-        )
+          response = plugin.execute(command)
+
+          context.last_intent = command.intent
+          context.last_target = command.target
+          context.last_arguments = command.arguments
+          context.last_response = response.message
+
+        print("\n------ CONTEXT ------")
+        print(context)
+        print("---------------------\n")
+
+        return response

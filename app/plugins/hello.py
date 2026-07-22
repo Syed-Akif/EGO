@@ -1,6 +1,7 @@
 from app.core.response import Response
 
 
+
 def execute(command):
     return Response(
         success=True,

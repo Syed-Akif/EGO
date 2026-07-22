@@ -1,6 +1,6 @@
 from app.plugins import hello
 from app.plugins import open
-
+from app.plugins import search
 
 PLUGINS = {
 
@@ -8,4 +8,5 @@ PLUGINS = {
 
     "open": open,
 
+    "search": search,
 }
