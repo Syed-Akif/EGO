@@ -1,3 +1,4 @@
+INTENT = "search"
 import webbrowser
 from urllib.parse import quote_plus
 from app.core.response import Response

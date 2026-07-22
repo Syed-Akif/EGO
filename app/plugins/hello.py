@@ -1,3 +1,4 @@
+INTENT = "hello"
 from app.core.response import Response
 
 

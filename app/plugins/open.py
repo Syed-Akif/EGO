@@ -1,3 +1,4 @@
+INTENT = "open"
 from app.plugins import applications
 from app.plugins import browser
 
