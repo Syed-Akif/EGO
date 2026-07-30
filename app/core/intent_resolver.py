@@ -35,6 +35,13 @@ INTENT_ALIASES = {
     "rename": "rename",
     "delete": "delete",
     "remove": "delete",
+    
+     
+    # Power
+    "lock": "power",
+    "shutdown": "power",
+    "restart": "power",
+    "sleep": "power",
 }
 
 
