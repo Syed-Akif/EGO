@@ -4,19 +4,35 @@ EGO
 Entry point of the application.
 
 Author: Syed
-Version: 0.2.0-alpha
+Version: 0.8.0-alpha
 """
 
 from app.core.parser import Parser
 from app.core.router import Router
 from app.core.brain import Brain
 
+from app.core.version import (
+    NAME,
+    FULL_NAME,
+    VERSION,
+    CODENAME,
+    BUILD,
+    AUTHOR,
+)
+
+
 def main():
 
-    print("=" * 50)
-    print("EGO Personal AI Assistant")
+    print("=" * 65)
+    print(f"🤖 {FULL_NAME}")
+    print("=" * 65)
+    print(f"Version   : {VERSION}")
+    print(f"Codename  : {CODENAME}")
+    print(f"Build     : {BUILD}")
+    print(f"Author    : {AUTHOR}")
+    print("=" * 65)
     print("Type 'exit' to quit.")
-    print("=" * 50)
+    print("=" * 65)
 
     parser = Parser()
     router = Router()

@@ -19,7 +19,22 @@ INTENT_ALIASES = {
     "find": "search",
     "lookup": "search",
 
+
+
+    "create": "create",
+    "make": "create",
+    "new": "create",
+    
+    
+       
+    "read": "read",
+    "show": "read",
+    "display": "read",
+    "write": "write",
+    "append": "append",
+    "rename": "rename",
 }
+
 
 
 def resolve(intent: str) -> str:

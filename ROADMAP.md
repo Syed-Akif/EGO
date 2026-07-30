@@ -1,0 +1,19 @@
+# EGO Roadmap
+
+## Completed
+
+- Plugin Architecture
+- Brain
+- Context
+- Intent Resolution
+- Automatic Plugin Discovery
+
+## Next
+
+- File System Plugin
+- Folder Management
+- Window Management
+- Clipboard
+- System Controls
+- Local AI
+- Voice Assistant
