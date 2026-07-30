@@ -64,3 +64,31 @@ def rename_folder(old_name: str, new_name: str) -> bool:
 
     except OSError:
         return False
+    
+from pathlib import Path
+import shutil
+
+
+def delete_folder(name: str) -> bool:
+    """
+    Deletes an empty folder.
+
+    Returns:
+        True if successful.
+        False otherwise.
+    """
+
+    path = Path.cwd() / name
+
+    if not path.exists():
+        return False
+
+    if not path.is_dir():
+        return False
+
+    try:
+        path.rmdir()
+        return True
+
+    except OSError:
+        return False

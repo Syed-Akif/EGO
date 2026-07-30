@@ -99,3 +99,27 @@ def rename_file(old_name: str, new_name: str) -> bool:
 
     except OSError:
         return False
+
+def delete_file(name: str) -> bool:
+    """
+    Deletes a file.
+
+    Returns:
+        True if successful.
+        False if the file doesn't exist or couldn't be deleted.
+    """
+
+    path = Path.cwd() / name
+
+    if not path.exists():
+        return False
+
+    if not path.is_file():
+        return False
+
+    try:
+        path.unlink()
+        return True
+
+    except OSError:
+        return False

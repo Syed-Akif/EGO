@@ -33,6 +33,8 @@ INTENT_ALIASES = {
     "write": "write",
     "append": "append",
     "rename": "rename",
+    "delete": "delete",
+    "remove": "delete",
 }
 
 

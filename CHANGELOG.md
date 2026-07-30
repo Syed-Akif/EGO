@@ -18,3 +18,20 @@
 
 ### Removed
 - Static registry.py
+
+
+## v0.9.0 - Sprint 3
+
+### Added
+- File rename support
+- Folder rename support
+
+### Improved
+- Expanded FileSystemManager API
+- Added rename plugin
+- Added rename intent handling
+
+### Tested
+- File rename
+- Folder rename
+- Invalid rename operations

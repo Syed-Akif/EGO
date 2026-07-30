@@ -6,6 +6,7 @@ from app.filesystem.folders import (
     open_folder,
     create_folder,
     rename_folder,
+    delete_folder,
 )
 
 from app.filesystem.files import (
@@ -14,6 +15,7 @@ from app.filesystem.files import (
     write_file,
     append_file,
     rename_file,
+    delete_file,
 )
 
 class FileSystemManager:
@@ -44,3 +46,9 @@ class FileSystemManager:
 
     def rename_folder(self, old_name: str, new_name: str) -> bool:
         return rename_folder(old_name, new_name)
+    
+    def delete_file(self, name: str) -> bool:
+        return delete_file(name)
+
+    def delete_folder(self, name: str) -> bool:
+        return delete_folder(name)
